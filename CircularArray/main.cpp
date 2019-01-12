@@ -10,4 +10,10 @@ int main()
   myArray.insert(2);
   myArray.insert(1);
   myArray.print();
+  myArray.rotateLeft();
+  myArray.print();
+  myArray.rotateRight();
+  myArray.print();
+  myArray.rotateByPosition(2);
+  myArray.print();
 }
