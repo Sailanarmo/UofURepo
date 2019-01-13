@@ -4,6 +4,7 @@
 
 #include "node.hpp"
 
+// This simply prints the array
 template <typename T>
 void printArray(const std::vector<Node<T>> &toPrint)
 {
@@ -14,18 +15,21 @@ void printArray(const std::vector<Node<T>> &toPrint)
   std::cout << std::endl;
 }
 
+// This performs a right rotation by using std::rotate
 template <typename T>
 void rightRotation(std::vector<Node<T>> &toRotate)
 {
   std::rotate(toRotate.rbegin(),toRotate.rbegin() + 1, toRotate.rend());
 }
 
+// This performs a left rotation by using std::rotate
 template <typename T>
 void leftRotation(std::vector<Node<T>> &toRotate)
 {
   std::rotate(toRotate.begin(),toRotate.begin() + 1, toRotate.end());
 }
 
+// This performs a left rotation by a user specific input. 
 template <typename T>
 void targetRotation(int target, std::vector<Node<T>> &toRotate)
 {
@@ -39,6 +43,7 @@ void targetRotation(int target, std::vector<Node<T>> &toRotate)
   }
 }
 
+// This is the Circular Array Class
 template <typename T>
 class CircularArray
 {
@@ -48,7 +53,6 @@ class CircularArray
     void clear() { array.clear(); }
     void print() { printArray(array); }
     void sort() { std::sort(array.begin(),array.end()); }
-    void merge() { std::merge(array
     
     void rotateRight() { rightRotation(array); }
     void rotateLeft() { leftRotation(array); }
