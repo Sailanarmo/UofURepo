@@ -4,7 +4,7 @@
 template <typename T>
 struct Node
 {
-  Node (T v) : value(v) {};
+  Node (T v, std::vector<T> n) : value(v), neighbors(n) {};
 
   T value;
   std::vector<T> neighbors;

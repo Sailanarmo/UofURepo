@@ -1,5 +1,14 @@
 #include "list.hpp"
 
+template <typename T>
+void print(const std::vector<T> &v)
+{
+  for(auto &&e : v)
+  {
+    std::cout << e << " ";
+  }
+  std::cout << std::endl;
+}
 
 int main()
 {
@@ -20,4 +29,9 @@ int main()
   myList.insertDependencies("d","c");
 
   myList.print();
+
+  std::vector<std::string> work = myList.findOptimalWork();
+  
+  print(work);
+
 }
