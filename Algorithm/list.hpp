@@ -3,6 +3,9 @@
 
 #include "node.hpp"
 
+// This template function takes a T value and a vector of nodes.
+// This will create a newVector and a new node and push them back
+// into the list.
 template <typename T>
 void insertValue(T value, std::vector<std::shared_ptr<Node<T>>> &currList)
 {
@@ -11,6 +14,8 @@ void insertValue(T value, std::vector<std::shared_ptr<Node<T>>> &currList)
   currList.push_back(newValue);
 }
 
+// This will take a pair of T's and insert them into the lists vector 
+// of neighbors.
 template <typename T>
 void addDependencies(T a, T b, std::vector<std::shared_ptr<Node<T>>> &currList)
 {
@@ -23,6 +28,7 @@ void addDependencies(T a, T b, std::vector<std::shared_ptr<Node<T>>> &currList)
   }
 }
 
+// This simply prints the Adjacency list
 template <typename T>
 void printList(const std::vector<std::shared_ptr<Node<T>>> &currList)
 {
@@ -39,7 +45,8 @@ void printList(const std::vector<std::shared_ptr<Node<T>>> &currList)
   std::cout << std::endl;
 }
 
-
+// This will find the optimal work, currently, this will not throw any error
+// if it does not find a path. 
 template <typename T>
 std::vector<T> findPath(const std::vector<std::shared_ptr<Node<T>>> &currList)
 {
@@ -72,6 +79,7 @@ std::vector<T> findPath(const std::vector<std::shared_ptr<Node<T>>> &currList)
   return newList;
 }
 
+// This is our Adjacency List class.
 template <typename T>
 class List
 {

@@ -1,6 +1,8 @@
 #include <memory>
 #include <vector>
 
+// This is our Node, it takes a type T and a std::vector of
+// type T.
 template <typename T>
 struct Node
 {

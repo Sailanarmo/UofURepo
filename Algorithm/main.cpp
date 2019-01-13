@@ -1,5 +1,6 @@
 #include "list.hpp"
 
+// This simply prints our vector of work.
 template <typename T>
 void print(const std::vector<T> &v)
 {
@@ -20,6 +21,7 @@ int main()
   myList.insert("d");
   myList.insert("e");
   myList.insert("f");
+
   myList.print();
 
   myList.insertDependencies("a","d");
